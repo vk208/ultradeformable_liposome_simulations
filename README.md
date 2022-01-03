@@ -13,3 +13,5 @@ _DensityHeatMap.py_ takes coordinate and trajectory files from your lipid bilaye
 _CompressibilityModulus.py_ reads the xvg files, calculates the area compressibility modulus and the bending modulus based on this paper (DOI: https://doi.org/10.1038/s41598-019-44318-9), and plots them. 
 
 _AddWF.py_ reads a coordinate file, finds the number of standard MARTINI water beads (W), converts 1/10th of the W beads to the antifreeze beads (WF), and writes a new coordinate file. 
+
+_MakeSlurmScripts.py_ creates SLURM submit scripts for a bunch of surface tension simulations and the bash scripts to easily submit to a supercomputer. 
