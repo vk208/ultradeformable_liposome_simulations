@@ -120,7 +120,7 @@ class Ensemble():
             f.write("  {0:.4f}  {1:.4f}  {2:.4f}\n".format(*self.box_dimensions))
 
     
-    def get_beads(self, index=[], residue=[], res_name=[], res_id=[], bead_type=[]):
+    def get_beads(self, index=np.array([]), residue=np.array([]), res_name=np.array([]), res_id=np.array([]), bead_type=np.array([])):
         
         query_beads = []
         for bead in self.beads:
