@@ -122,21 +122,24 @@ class Ensemble():
     
     def get_beads(self, index=np.array([]), residue=np.array([]), res_name=np.array([]), res_id=np.array([]), bead_type=np.array([])):
         
+        """ Skip the beads that don't match the given inputs (index, residue, res_name, res_id, bead_type). Query_beads are the beads that match the inputs.
+        """
+        
         query_beads = []
         for bead in self.beads:
             if index:
                 if bead.index not in index:
                     continue
-            if residue:
+            elif residue:
                 if bead.residue not in residue:
                     continue
-            if bead_type:
+            elif bead_type:
                 if bead.bead_type not in bead_type:
                     continue
-            if res_name:
+            elif res_name:
                 if bead.res_name not in res_name:
                     continue
-            if res_id:
+            elif res_id:
                 if bead.res_id not in res_id:
                     continue
             query_beads.append(bead)
